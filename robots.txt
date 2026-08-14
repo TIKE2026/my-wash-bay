@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tike2026.github.io/my-wash-bay/sitemap.xml
