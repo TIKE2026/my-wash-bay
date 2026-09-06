@@ -107,7 +107,38 @@
     .hero-meta{gap:18px;}
   }
 
-.back{display:inline-block;margin-top:18px;text-decoration:none;border:1px solid var(--line);padding:10px 14px;border-radius:10px}
+
+.back-home{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  width:fit-content;
+  max-width:calc(100% - 32px);
+  margin:34px auto 38px;
+  padding:12px 18px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:12px;
+  background:#111821;
+  color:#f5f7fa !important;
+  text-decoration:none !important;
+  font-size:15px;
+  font-weight:700;
+  line-height:1.4;
+  letter-spacing:.01em;
+  box-shadow:inset 3px 0 0 #69e0a3,0 6px 18px rgba(0,0,0,.16);
+}
+.back-home:visited{color:#f5f7fa !important;}
+.back-home:hover{
+  border-color:rgba(105,224,163,.55);
+  background:#151e29;
+}
+.back-home .back-arrow{
+  color:#69e0a3;
+  font-size:18px;
+  line-height:1;
+}
+
 </style>
 </head>
 <body>
@@ -366,8 +397,7 @@
   </section>
 
 
-  <a class="back" href="index.html">← 使ってナビ トップへ戻る</a>
-</main>
+  </main>
 
 
 <!-- 楽天おすすめ商品ウィジェット -->
@@ -399,6 +429,9 @@
     <script type="text/javascript" src="https://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js?20230106"></script>
   </div>
 </section>
+
+
+<a class="back-home" href="index.html"><span class="back-arrow">←</span><span>使ってナビ トップへ戻る</span></a>
 
 <footer>
   <div class="wrap foot-grid">
