@@ -3,13 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>使ってナビ｜洗車用品・カー用品・農機具を実際に使ってレビュー</title>
-
 <meta name="description" content="洗車用品、カー用品、農機具など、実際に使った道具や用品を写真と感想で紹介するレビューサイトです。">
-
 <link rel="canonical" href="https://tike2026.github.io/my-wash-bay/">
-
 <style>
 :root{
   --bg:#0b0f14;
@@ -21,15 +17,8 @@
   --accent:#69e0a3;
   --accent2:#5bbcff;
 }
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;
@@ -40,381 +29,130 @@ body{
     var(--bg);
   line-height:1.75;
 }
-
-a{
-  color:inherit;
-}
-
-.wrap{
-  max-width:1180px;
-  margin:auto;
-  padding:0 24px;
-}
-
-/* ヒーロー */
-.hero{
-  padding:88px 0 56px;
-}
-
+a{color:inherit}
+.wrap{max-width:1180px;margin:auto;padding:0 24px}
+.hero{padding:88px 0 56px}
 .badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:7px 12px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:rgba(255,255,255,.04);
-  color:#cdd6df;
-  font-size:.86rem;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:7px 12px;border:1px solid var(--line);border-radius:999px;
+  background:rgba(255,255,255,.04);color:#cdd6df;font-size:.86rem;
 }
-
 .hero h1{
   margin:22px 0 18px;
   font-size:clamp(2.5rem,7vw,5.4rem);
-  line-height:1.03;
-  letter-spacing:-.045em;
+  line-height:1.03;letter-spacing:-.045em;
   max-width:900px;
 }
-
 .hero h1 span{
   display:inline-block;
   letter-spacing:-.055em;
   background:linear-gradient(90deg,var(--accent2),var(--accent));
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
 }
-
-.hero p{
-  max-width:760px;
-  color:var(--muted);
-  font-size:1.08rem;
-}
-
-.hero-actions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:28px;
-}
-
+.hero p{max-width:760px;color:var(--muted);font-size:1.08rem}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .hero-actions a{
-  text-decoration:none;
-  padding:13px 18px;
-  border-radius:12px;
-  font-weight:700;
-  border:1px solid var(--line);
-  background:#fff;
-  color:#0c1117;
+  text-decoration:none;padding:13px 18px;border-radius:12px;font-weight:700;
+  border:1px solid var(--line);background:#fff;color:#0c1117;
 }
-
-.hero-actions a.secondary{
-  background:rgba(255,255,255,.04);
-  color:#fff;
-}
-
-/* セクション見出し */
-.section-title{
-  margin:26px 0 18px;
-}
-
-.section-title small{
-  color:var(--accent);
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  font-weight:800;
-}
-
-.section-title h2{
-  margin:7px 0 0;
-  font-size:clamp(1.7rem,4vw,2.5rem);
-}
-
-/* カテゴリー */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px;
-}
-
+.hero-actions a.secondary{background:rgba(255,255,255,.04);color:#fff}
+.section-title{margin:26px 0 18px}
+.section-title small{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-weight:800}
+.section-title h2{margin:7px 0 0;font-size:clamp(1.7rem,4vw,2.5rem)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .card{
-  position:relative;
-  overflow:hidden;
-  min-height:330px;
-  padding:26px;
-  border-radius:24px;
+  position:relative;overflow:hidden;
+  min-height:330px;padding:26px;border-radius:24px;
   border:1px solid var(--line);
-  background:linear-gradient(
-    180deg,
-    rgba(255,255,255,.055),
-    rgba(255,255,255,.025)
-  );
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));
   box-shadow:0 20px 45px rgba(0,0,0,.24);
   transition:.22s ease;
-  display:flex;
-  flex-direction:column;
+  display:flex;flex-direction:column;
 }
-
-.card:hover{
-  transform:translateY(-5px);
-  border-color:rgba(255,255,255,.18);
-}
-
+.card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.18)}
 .icon{
-  width:54px;
-  height:54px;
-  border-radius:16px;
-  display:grid;
-  place-items:center;
-  background:rgba(255,255,255,.07);
-  font-size:1.7rem;
-  margin-bottom:22px;
+  width:54px;height:54px;border-radius:16px;display:grid;place-items:center;
+  background:rgba(255,255,255,.07);font-size:1.7rem;margin-bottom:22px;
 }
-
-.card h3{
-  font-size:1.5rem;
-  margin:0 0 12px;
-}
-
-.card p{
-  color:var(--muted);
-  margin:0 0 24px;
-  flex:1;
-}
-
+.card h3{font-size:1.5rem;margin:0 0 12px}
+.card p{color:var(--muted);margin:0 0 24px;flex:1}
 .card a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  text-decoration:none;
-  font-weight:800;
-  padding:12px 14px;
-  border-radius:12px;
-  background:#fff;
-  color:#0b0f14;
+  display:inline-flex;align-items:center;justify-content:space-between;gap:10px;
+  text-decoration:none;font-weight:800;padding:12px 14px;border-radius:12px;
+  background:#fff;color:#0b0f14;
 }
-
-.card:nth-child(2) a{
-  background:var(--accent2);
-}
-
-.card:nth-child(3) a{
-  background:var(--accent);
-}
-
-/* 楽天おすすめ */
-.rakuten-section{
-  margin:46px 0 50px;
-}
-
+.card:nth-child(2) a{background:var(--accent2)}
+.card:nth-child(3) a{background:var(--accent)}
+.rakuten-section{max-width:760px;margin:46px auto 50px}
 .rakuten-box{
-  padding:24px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:rgba(255,255,255,.035);
-  overflow-x:auto;
+  padding:24px;border:1px solid var(--line);
+  border-radius:20px;background:rgba(255,255,255,.035);
+  overflow-x:auto;text-align:center;
 }
-
-.rakuten-box p{
-  margin-top:0;
-  color:var(--muted);
-}
-
-/* 追加予定 */
+.rakuten-box p{margin-top:0;color:var(--muted);text-align:left}
+.rakuten-box > table{margin-left:auto!important;margin-right:auto!important}
 .note{
-  margin:32px 0 70px;
-  padding:24px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:rgba(255,255,255,.035);
+  margin:32px 0 70px;padding:24px;border:1px solid var(--line);
+  border-radius:20px;background:rgba(255,255,255,.035);
 }
-
-.note h3{
-  margin:0 0 8px;
-}
-
-.note p{
-  margin:0;
-  color:var(--muted);
-}
-
-/* フッター */
+.note h3{margin:0 0 8px}.note p{margin:0;color:var(--muted)}
 footer{
-  border-top:1px solid var(--line);
-  padding:30px 0 44px;
-  color:#758291;
-  font-size:.9rem;
+  border-top:1px solid var(--line);padding:30px 0 44px;color:#758291;font-size:.9rem
 }
-
-/* スマホ */
-@media(max-width:850px){
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero{
-    padding-top:58px;
-  }
-
-  .card{
-    min-height:280px;
-  }
-
-  .rakuten-box{
-    padding:16px;
-  }
-}
+@media(max-width:850px){.grid{grid-template-columns:1fr}.hero{padding-top:58px}.card{min-height:280px}.rakuten-box{padding:16px}}
 </style>
-
 </head>
-
 <body>
-
 <header class="hero">
   <div class="wrap">
-
-    <div class="badge">
-      TSUKATTE NAVI ・ REAL USE REVIEW
-    </div>
-
-    <h1>
-      <span>使ってナビ</span>
-    </h1>
-
-    <p style="
-      font-size:clamp(1.15rem,2.4vw,1.45rem);
-      color:#fff;
-      font-weight:700;
-      margin-bottom:10px;
-    ">
-      洗車用品・カー用品・農機具を実際に使ってレビュー
-    </p>
-
-    <p>
-      実際に使った写真や使用感を中心に、
-      良かった点や使い方をわかりやすく紹介します。
-      購入前や取り付け前の商品選びに役立つ情報をまとめています。
-    </p>
-
+    <div class="badge">TSUKATTE NAVI ・ REAL USE REVIEW</div>
+    <h1><span>使ってナビ</span></h1>
+    <p style="font-size:clamp(1.15rem,2.4vw,1.45rem);color:#fff;font-weight:700;margin-bottom:10px;">洗車用品・カー用品・農機具を実際に使ってレビュー</p>
+    <p>実際に使った写真や使用感を中心に、良かった点や使い方をわかりやすく紹介します。購入前や取り付け前の商品選びに役立つ情報をまとめています。</p>
     <div class="hero-actions">
-      <a href="#reviews">
-        レビューを見る
-      </a>
-
-      <a class="secondary" href="makita-muc031g.html">
-        最新：マキタ MUC031G
-      </a>
+      <a href="#reviews">レビューを見る</a>
+      <a class="secondary" href="makita-muc031g.html">最新：マキタ MUC031G</a>
     </div>
-
   </div>
 </header>
 
-
 <main class="wrap" id="reviews">
-
   <div class="section-title">
     <small>Categories</small>
     <h2>レビューカテゴリー</h2>
   </div>
 
-
   <section class="grid">
-
-    <!-- 洗車用品 -->
     <article class="card">
-
-      <div class="icon">
-        🚗
-      </div>
-
-      <h3>
-        洗車用品
-      </h3>
-
-      <p>
-        カーシャンプー、ホイールブラシ、
-        撥水剤、コーティング用品など、
-        実際に使っている洗車用品を工程順に紹介しています。
-      </p>
-
-      <a href="car-wash.html">
-        <span>洗車用品を見る</span>
-        <span>→</span>
-      </a>
-
+      <div class="icon">🚗</div>
+      <h3>洗車用品</h3>
+      <p>カーシャンプー、ホイールブラシ、撥水剤、コーティング用品など、実際に使っている洗車用品を工程順に紹介しています。</p>
+      <a href="car-wash.html"><span>洗車用品を見る</span><span>→</span></a>
     </article>
 
-
-    <!-- カー用品 -->
     <article class="card">
-
-      <div class="icon">
-        📹
-      </div>
-
-      <h3>
-        カー用品・取付
-      </h3>
-
-      <p>
-        新型スペーシアギアへのNV-8000M取り付けを中心に、
-        配線・アースポイント・必要工具まで
-        実際の写真で紹介します。
-      </p>
-
-      <a href="NV8000M.html">
-        <span>NV-8000Mを見る</span>
-        <span>→</span>
-      </a>
-
+      <div class="icon">📹</div>
+      <h3>カー用品・取付</h3>
+      <p>新型スペーシアギアへのNV-8000M取り付けを中心に、配線・アースポイント・必要工具まで実際の写真で紹介します。</p>
+      <a href="NV8000M.html"><span>NV-8000Mを見る</span><span>→</span></a>
     </article>
 
-
-    <!-- 農機具 -->
     <article class="card">
-
-      <div class="icon">
-        🌱
-      </div>
-
-      <h3>
-        農機具・農作業用品
-      </h3>
-
-      <p>
-        マキタ MUC031Gチェーンソー、
-        竹切りでの使用感、
-        チェーンオイル、
-        バッテリーカバー、
-        安全装備などを紹介しています。
-      </p>
-
-      <a href="makita-muc031g.html">
-        <span>農機具レビューを見る</span>
-        <span>→</span>
-      </a>
-
+      <div class="icon">🌱</div>
+      <h3>農機具・農作業用品</h3>
+      <p>マキタ MUC031Gチェーンソー、竹切りでの使用感、チェーンオイル、バッテリーカバー、安全装備などを紹介しています。</p>
+      <a href="makita-muc031g.html"><span>農機具レビューを見る</span><span>→</span></a>
     </article>
-
   </section>
 
-
-  <!-- 楽天おすすめ商品 -->
   <section class="rakuten-section">
-
     <div class="section-title">
       <small>Recommended</small>
       <h2>おすすめ商品</h2>
     </div>
 
     <div class="rakuten-box">
-
-      <p>
-        楽天市場の商品からおすすめ商品を表示しています。
-      </p>
-
+      <p>楽天市場の商品からおすすめ商品を表示しています。</p>
       <script type="text/javascript">
       rakuten_design="slide";
       rakuten_affiliateId="08ce9fe8.bb9d5ab8.08ce9fe9.9e9e244c";
@@ -429,39 +167,18 @@ footer{
       rakuten_recommend="on";
       rakuten_ts="1788656469318";
       </script>
-
-      <script
-        type="text/javascript"
-        src="https://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js?20230106">
-      </script>
-
+      <script type="text/javascript" src="https://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js?20230106"></script>
     </div>
-
   </section>
 
-
-  <!-- 追加予定 -->
   <section class="note">
-
-    <h3>
-      これから追加予定
-    </h3>
-
-    <p>
-      実際に使用した農機具や農作業用品、
-      カー用品などを順次追加していきます。
-    </p>
-
+    <h3>これから追加予定</h3>
+    <p>実際に使用した農機具や農作業用品、カー用品などを順次追加していきます。</p>
   </section>
-
 </main>
 
-
 <footer>
-  <div class="wrap">
-    実際に使用した道具・用品を中心に紹介しています。
-  </div>
+  <div class="wrap">実際に使用した道具・用品を中心に紹介しています。</div>
 </footer>
-
 </body>
 </html>
