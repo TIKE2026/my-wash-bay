@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>コンクリート床塗装のやり方｜下地処理・養生・プライマー・水性と油性の違い｜使ってナビ</title>
+<meta name="description" content="コンクリート床をDIYで塗装するときの準備、清掃、養生、プライマー、塗装、安全装備まで実際の作業目線で紹介。水性・油性塗料の特徴や、ローラー・刷毛・マスク・手袋など必要な道具もまとめています。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://tike2026.github.io/my-wash-bay/concrete-floor-paint.html">
+
+<style>
+:root{
+  --bg:#0f1418;
+  --panel:#171d22;
+  --panel2:#1d252c;
+  --line:rgba(255,255,255,.10);
+  --text:#f5f7f8;
+  --muted:#aab4bd;
+  --accent:#f1c85b;
+  --accent2:#6dc7b7;
+  --danger:#ffb1a8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;
+  background:
+    radial-gradient(circle at 10% 0%,rgba(241,200,91,.10),transparent 30%),
+    radial-gradient(circle at 90% 10%,rgba(109,199,183,.10),transparent 28%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.8;
+}
+a{color:inherit}
+.wrap{max-width:1120px;margin:auto;padding:0 22px}
+.hero{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:800}
+h1{font-size:clamp(2.2rem,6vw,4.6rem);line-height:1.08;margin:10px 0 18px}
+.hero p{max-width:780px;color:var(--muted);font-size:1.05rem}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.badge{padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:.86rem}
+
+main{padding:34px 0 70px}
+section{margin:0 0 34px}
+.panel{
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025));
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:24px;
+}
+h2{font-size:clamp(1.55rem,3.2vw,2.25rem);line-height:1.35;margin:0 0 14px}
+h3{font-size:1.2rem;margin:0 0 8px}
+p{margin:0 0 12px}
+.notice{border-left:5px solid var(--accent);background:rgba(241,200,91,.08);padding:18px;border-radius:12px}
+.safe{border-left-color:var(--danger);background:rgba(255,177,168,.08)}
+.steps{display:grid;gap:14px}
+.step{display:grid;grid-template-columns:54px 1fr;gap:14px;align-items:start;padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03)}
+.num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#111;font-weight:900}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.product{
+  overflow:hidden;border:1px solid var(--line);border-radius:16px;background:#fff;color:#15202b
+}
+.product img{display:block;width:100%;height:240px;object-fit:contain;background:#f4f4f4}
+.product-body{padding:16px}
+.product h3{font-size:1.05rem;line-height:1.5}
+.price{font-weight:800;margin:8px 0;color:#9a1b1b}
+.shop-btn{
+  display:inline-block;text-decoration:none;background:#bf0000;color:#fff!important;
+  padding:10px 15px;border-radius:999px;font-weight:800
+}
+.note{font-size:.88rem;color:var(--muted)}
+.tools-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tool{padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03)}
+.compare{width:100%;border-collapse:collapse;overflow:hidden;border-radius:14px}
+.compare th,.compare td{border:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}
+.compare th{background:rgba(255,255,255,.05)}
+.rakuten-widget{max-width:760px;margin:34px auto 0;padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.04);overflow-x:auto;text-align:center}
+.rakuten-widget h2{text-align:left;margin-bottom:18px}
+.rakuten-widget > table{margin-left:auto!important;margin-right:auto!important}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;color:#7f8b96;font-size:.9rem}
+.back{display:inline-block;margin-top:18px;text-decoration:none;border:1px solid var(--line);padding:10px 14px;border-radius:10px}
+@media(max-width:760px){
+  .grid,.tools-list{grid-template-columns:1fr}
+  .step{grid-template-columns:46px 1fr}
+  .product img{height:220px}
+}
+</style>
+</head>
+
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">TSUKATTE NAVI ・ DIY FLOOR PAINTING</div>
+    <h1>コンクリート床塗装<br>準備から仕上げまで</h1>
+    <p>コンクリート床をDIYで塗るときに、実際にそろえておきたい材料・道具と、作業前に気をつけたいポイントをまとめました。特に養生、床の清掃、安全装備は仕上がりと作業のしやすさに大きく関わります。</p>
+    <div class="badges">
+      <span class="badge">下地処理</span>
+      <span class="badge">養生</span>
+      <span class="badge">プライマー</span>
+      <span class="badge">水性・油性</span>
+      <span class="badge">安全装備</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="notice">
+    <strong>先に大事なポイント</strong>
+    <p>養生テープはきっちり貼ります。床塗装は思った以上に周りが汚れやすいので、壁際や柱、設備まわりまで広めに養生しておくと安心です。</p>
+  </section>
+
+  <section class="panel">
+    <h2>作業の流れ</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div>
+          <h3>床のほこり・砂を落とす</h3>
+          <p>水が使える場所なら、床に水を流してほこりや砂をしっかり取り除いてからスタートします。塗る前に床面をきれいにしておくことが大切です。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">2</div>
+        <div>
+          <h3>周囲をしっかり養生する</h3>
+          <p>マスカーテープなどを使って、壁際・巾木・柱・設備まわりをきっちり保護します。ローラー塗装は意外と飛散しやすいので、塗る範囲より広めに養生しておくのがおすすめです。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">3</div>
+        <div>
+          <h3>必要ならプライマーを塗る</h3>
+          <p>車が入る床や、塗膜の剥がれが心配な場所では、プライマーを施工してから上塗りする方法を選びます。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">4</div>
+        <div>
+          <h3>端を刷毛、広い面をローラーで塗る</h3>
+          <p>壁際や角は刷毛、広い面はローラーを使うと作業しやすくなります。伸縮ポールがあると、広い床でも立った姿勢で塗り進めやすくなります。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">5</div>
+        <div>
+          <h3>乾燥させる</h3>
+          <p>塗料ごとの乾燥時間・塗り重ね時間を確認して、十分に乾燥させます。車を入れる場所では、塗装後すぐに負荷をかけないようにします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>水性と油性、どちらを選ぶ？</h2>
+    <table class="compare">
+      <tr>
+        <th>水性</th>
+        <td>においが比較的少なく、塗装後の道具の洗浄もしやすいので扱いやすいです。最近はこちらを選ぶ場面も増えています。</td>
+      </tr>
+      <tr>
+        <th>油性</th>
+        <td>塗膜の強さを重視したい場所で選ばれることがあります。一方で、においがしばらく残りやすいため、作業時は安全装備と換気に注意します。</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="notice safe">
+    <strong>油性塗料を使う場合</strong>
+    <p>防毒マスクと手袋を忘れずに。塗料やシーラーの注意表示も確認し、作業場所の換気を確保してください。</p>
+  </section>
+
+  <section class="panel">
+    <h2>そろえておきたい材料・道具</h2>
+    <div class="tools-list">
+      <div class="tool"><strong>床用塗料</strong><br>フロアトップ #7000 / #1400 など</div>
+      <div class="tool"><strong>プライマー・シーラー</strong><br>床の状態や使用条件に合わせて選択</div>
+      <div class="tool"><strong>ローラーセット</strong><br>広い面を効率よく塗装</div>
+      <div class="tool"><strong>伸縮ポール</strong><br>立った姿勢で広い床を塗りやすい</div>
+      <div class="tool"><strong>刷毛</strong><br>壁際・角・細かい部分用</div>
+      <div class="tool"><strong>マスカーテープ</strong><br>周囲の飛散・汚れ防止</div>
+      <div class="tool"><strong>防毒マスク</strong><br>特に油性塗料・溶剤系で重要</div>
+      <div class="tool"><strong>ニトリル手袋</strong><br>手の汚れ・塗料付着防止</div>
+      <div class="tool"><strong>ペイントうすめ液</strong><br>油性塗料の希釈や道具の洗浄用</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>今回そろえた商品</h2>
+    <div class="grid">
+
+      <article class="product">
+        <img src="https://hbb.afl.rakuten.co.jp/hgb/5737a8a1.7af9bb21.5737a8a2.0e15679f/?me_id=1213562&item_id=10014106&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fohhashi%2Fcabinet%2Fyukayou%2Ffloortop-7000-ksam15.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="フロアトップ#7000">
+        <div class="product-body">
+          <h3>アトミクス フロアトップ #7000</h3>
+          <p>コンクリート床用の溶剤系塗料。3.75kgセット・15kgセット。</p>
+          <div class="price">12,878円〜（2026/9/6時点）</div>
+          <a class="shop-btn" href="https://hb.afl.rakuten.co.jp/ichiba/5737a8a1.7af9bb21.5737a8a2.0e15679f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fohhashi%2Ffloortop-7000-k%2F&link_type=picttext" target="_blank" rel="nofollow sponsored noopener">楽天で購入</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://hbb.afl.rakuten.co.jp/hgb/5737acce.f928414f.5737accf.f957a99e/?me_id=1273476&item_id=16872278&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frcmdse%2Fcabinet%2Ff330%2Ff3-4972910336813.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="カンペハピオ 油性密着シーラー">
+        <div class="product-body">
+          <h3>カンペハピオ 油性密着シーラー とうめい 14L</h3>
+          <p>下塗り用の油性密着シーラー。</p>
+          <div class="price">12,750円（2026/9/6時点）</div>
+          <a class="shop-btn" href="https://hb.afl.rakuten.co.jp/ichiba/5737acce.f928414f.5737accf.f957a99e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frcmdse%2Ff3-4972910336813%2F&link_type=picttext" target="_blank" rel="nofollow sponsored noopener">楽天で購入</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://hbb.afl.rakuten.co.jp/hgb/5737adf4.0321d3b5.5737adf5.7e95554d/?me_id=1232627&item_id=10010136&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fpaintjoy%2Fcabinet%2Fshohin01%2Ffl%2Ffl-227_sku.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="フロアトップアクア 水性速乾プライマー">
+        <div class="product-body">
+          <h3>フロアトップアクア 水性速乾プライマー</h3>
+          <p>4kg / 15kg。透明の水性下塗りプライマー。</p>
+          <div class="price">8,580円〜（2026/9/6時点）</div>
+          <a class="shop-btn" href="https://hb.afl.rakuten.co.jp/ichiba/5737adf4.0321d3b5.5737adf5.7e95554d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpaintjoy%2Ffl-227%2F&link_type=picttext" target="_blank" rel="nofollow sponsored noopener">楽天で購入</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://hbb.afl.rakuten.co.jp/hgb/5737adf4.0321d3b5.5737adf5.7e95554d/?me_id=1232627&item_id=10000196&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fpaintjoy%2Fcabinet%2Fshohin01%2Ffl%2Ffl-006_sku.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="フロアトップ#1400">
+        <div class="product-body">
+          <h3>アトミクス フロアトップ #1400</h3>
+          <p>一液水性アクリル樹脂のコンクリート床用塗料。4kg / 15kg・10色。</p>
+          <div class="price">9,900円〜（2026/9/6時点）</div>
+          <a class="shop-btn" href="https://hb.afl.rakuten.co.jp/ichiba/5737adf4.0321d3b5.5737adf5.7e95554d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpaintjoy%2F1066003%2F&link_type=picttext" target="_blank" rel="nofollow sponsored noopener">楽天で購入</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://hbb.afl.rakuten.co.jp/hgb/5737b2d6.4b32df23.5737b2d7.4c1715a6/?me_id=1420262&item_id=10035527&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Flb77%2Fcabinet%2Fr_2026020943%2F20260209165013_33_1.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="アサヒペン ローラーバケセット BS-180">
+        <div class="product-body">
+          <h3>アサヒペン 万能用ローラーバケセット BS-180</h3>
+          <p>水性・油性兼用の5点セット。</p>
+          <div class="price">1,589円（2026/9/6時点）</div>
+          <a class="shop-btn" href="https://hb.afl.rakuten.co.jp/ichiba/5737b2d6.4b32df23.5737b2d7.4c1715a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flb77%2F20260209165013_33%2F&link_type=picttext" target="_blank" rel="nofollow sponsored noopener">楽天で購入</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://hbb.afl.rakuten.co.jp/hgb/5737ba9b.dd27e9f0.5737ba9c.74f88c07/?me_id=1429504&item_id=10013146&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fluxelayerlook%2Fcabinet%2Ffl02%2Ffl0271_1.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="伸縮式ペイントローラー">
+        <div class="product-body">
+          <h3>伸縮式ペイントローラー</h3>
+          <p>広い床を立った姿勢で塗るときに便利な延長ポール付き。</p>
+          <div class="price">3,440円〜（2026/9/6時点）</div>
+          <a class="shop-btn" href="https://hb.afl.rakuten.co.jp/ichiba/5737ba9b.dd27e9f0.5737ba9c.74f88c07/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fluxelayerlook%2Ffl0271%2F&link_type=picttext" target="_blank" rel="nofollow sponsored noopener">楽天で購入</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://hbb.afl.rakuten.co.jp/hgb/5737bbdf.a798eab9.5737bbe0.62319ff5/?me_id=1210156&item_id=10006334&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fsensya%2Fcabinet%2F1500_2025%2F244_1500.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="マスカーテープ 1000mm 33m">
+        <div class="product-body">
+          <h3>マスカーテープ 1000mm × 33m</h3>
+          <p>養生フィルム付き。床塗装では周囲が汚れやすいので、広めの養生に。</p>
+          <div class="price">1,177円（2026/9/6時点）</div>
+          <a class="shop-btn" href="https://hb.afl.rakuten.co.jp/ichiba/5737bbdf.a798eab9.5737bbe0.62319ff5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsensya%2F244%2F&link_type=picttext" target="_blank" rel="nofollow sponsored noopener">楽天で購入</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://hbb.afl.rakuten.co.jp/hgb/5737bd7e.46539f5c.5737bd7f.48381eeb/?me_id=1225177&item_id=10009890&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fssn%2Fcabinet%2F02531315%2F09691570%2F218223-1.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="アサヒペン 刷毛3本セット">
+        <div class="product-body">
+          <h3>アサヒペン 刷毛3本セット</h3>
+          <p>30mm・50mm・70mm。壁際や角などローラーが届きにくい部分用。</p>
+          <div class="price">1,200円（2026/9/6時点）</div>
+          <a class="shop-btn" href="https://hb.afl.rakuten.co.jp/ichiba/5737bd7e.46539f5c.5737bd7f.48381eeb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fssn%2F10009890%2F&link_type=picttext" target="_blank" rel="nofollow sponsored noopener">楽天で購入</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://hbb.afl.rakuten.co.jp/hgb/5737c025.3e539c33.5737c026.8ec201d9/?me_id=1227792&item_id=10002046&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fanzen-mirai%2Fcabinet%2Fmask%2F021202.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="3M 防毒マスク 塗装作業用">
+        <div class="product-body">
+          <h3>3M 防毒マスク 塗装作業用 吸収缶セット</h3>
+          <p>油性塗料・溶剤系の作業時に忘れたくない安全装備。</p>
+          <div class="price">1,936円（2026/9/6時点）</div>
+          <a class="shop-btn" href="https://hb.afl.rakuten.co.jp/ichiba/5737c025.3e539c33.5737c026.8ec201d9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fanzen-mirai%2F021202%2F&link_type=picttext" target="_blank" rel="nofollow sponsored noopener">楽天で購入</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://hbb.afl.rakuten.co.jp/hgb/5737ce8a.8ea04054.5737ce8b.1b319aa0/?me_id=1249475&item_id=10010258&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ftenkapas%2Fcabinet%2Fitem_image%2Fitem_health_beauty%2Fsanitary-goods%2Fglove001-2026.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="ニトリル手袋">
+        <div class="product-body">
+          <h3>ニトリル手袋</h3>
+          <p>塗料・シーラーが手につくのを防ぐ使い捨て手袋。</p>
+          <div class="price">999円〜（2026/9/6時点）</div>
+          <a class="shop-btn" href="https://hb.afl.rakuten.co.jp/ichiba/5737ce8a.8ea04054.5737ce8b.1b319aa0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftenkapas%2Fglove001%2F&link_type=picttext" target="_blank" rel="nofollow sponsored noopener">楽天で購入</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://hbb.afl.rakuten.co.jp/hgb/5737d181.e413e800.5737d182.60b9799e/?me_id=1378535&item_id=10000324&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fnippe%2Fcabinet%2F13331454%2Fimgrc0114002530.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="ペイントうすめ液 1.6L">
+        <div class="product-body">
+          <h3>ペイントうすめ液 1.6L</h3>
+          <p>油性塗料の希釈や、使用後の刷毛・道具の洗浄用。</p>
+          <div class="price">1,480円（2026/9/6時点）</div>
+          <a class="shop-btn" href="https://hb.afl.rakuten.co.jp/ichiba/5737d181.e413e800.5737d182.60b9799e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnippe%2F4976124500534%2F&link_type=picttext" target="_blank" rel="nofollow sponsored noopener">楽天で購入</a>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="note">※価格・在庫・送料は変更される場合があります。最新情報はリンク先で確認してください。アフィリエイト広告を利用しています。</p>
+  </section>
+
+  <section class="rakuten-widget">
+    <h2>楽天のおすすめ商品</h2>
+    <script type="text/javascript">
+    rakuten_design="slide";
+    rakuten_affiliateId="08ce9fe8.bb9d5ab8.08ce9fe9.9e9e244c";
+    rakuten_items="ctsmatch";
+    rakuten_genreId="0";
+    rakuten_size="468x160";
+    rakuten_target="_blank";
+    rakuten_theme="gray";
+    rakuten_border="off";
+    rakuten_auto_mode="on";
+    rakuten_genre_title="off";
+    rakuten_recommend="on";
+    rakuten_ts="1788659449530";
+    </script>
+    <script type="text/javascript" src="https://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js?20230106"></script>
+  </section>
+
+  <a class="back" href="index.html">← 使ってナビ トップへ戻る</a>
+
+</main>
+
+<footer>
+  <div class="wrap">使ってナビ｜実際に使った道具・用品を中心に紹介しています。</div>
+</footer>
+
+</body>
+</html>
