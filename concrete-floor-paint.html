@@ -86,7 +86,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;color:#7f8b96;font-s
   .product img{height:220px}
 }
 
-
 .back-home{
   display:flex;
   align-items:center;
@@ -119,17 +118,28 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;color:#7f8b96;font-s
 }
 
 
-.paint-calc{margin-top:18px;padding:20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03)}
-.paint-calc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.paint-field label{display:block;font-weight:800;margin-bottom:6px}
-.paint-field input,.paint-field select{width:100%;padding:12px 13px;border-radius:10px;border:1px solid var(--line);background:#111821;color:var(--text);font-size:16px}
-.paint-result{margin-top:18px;padding:16px;border:1px solid rgba(105,224,163,.35);border-radius:14px;background:rgba(105,224,163,.08)}
-.paint-result strong{font-size:1.55rem;color:#69e0a3}
-.paint-sub{margin-top:6px;color:var(--muted);font-size:.92rem}
-.dry-table{width:100%;border-collapse:collapse;margin-top:14px}
-.dry-table th,.dry-table td{border:1px solid var(--line);padding:11px;text-align:left;vertical-align:top}
-.dry-table th{background:rgba(255,255,255,.05)}
-@media(max-width:760px){.paint-calc-grid{grid-template-columns:1fr}.dry-table{font-size:.92rem}}
+.floor-calc-feature{
+  border:2px solid rgba(105,224,163,.58);
+  background:linear-gradient(180deg,rgba(105,224,163,.10),rgba(255,255,255,.025));
+  box-shadow:0 16px 40px rgba(0,0,0,.22);
+}
+.floor-calc-badge{
+  display:inline-block;margin-bottom:10px;padding:6px 11px;border-radius:999px;
+  background:#69e0a3;color:#0d1612;font-size:.8rem;font-weight:900;
+}
+.floor-calc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.floor-field label{display:block;font-weight:800;margin-bottom:6px}
+.floor-field input,.floor-field select{
+  width:100%;padding:12px 13px;border-radius:10px;border:1px solid var(--line);
+  background:#111821;color:var(--text);font-size:16px
+}
+.floor-result{
+  margin-top:18px;padding:16px;border:2px solid rgba(105,224,163,.48);
+  border-radius:14px;background:rgba(105,224,163,.12)
+}
+.floor-result strong{font-size:1.8rem;color:#69e0a3}
+.floor-sub{margin-top:6px;color:var(--muted);font-size:.92rem}
+@media(max-width:760px){.floor-calc-grid{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -151,6 +161,47 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;color:#7f8b96;font-s
 </header>
 
 <main class="wrap">
+
+
+  <section class="panel floor-calc-feature">
+    <div class="floor-calc-badge">まずここをチェック</div>
+    <h2>何㎡で何kg必要？ かんたん計算</h2>
+    <p>床面積を入れるだけで、必要な塗料量の目安を計算できます。買いすぎ・不足防止の目安に使えます。</p>
+
+    <div class="floor-calc-grid">
+      <div class="floor-field">
+        <label for="floorArea">床面積（㎡）</label>
+        <input id="floorArea" type="number" min="0" step="0.1" value="30" inputmode="decimal">
+      </div>
+      <div class="floor-field">
+        <label for="floorProduct">塗料</label>
+        <select id="floorProduct">
+          <option value="1400">フロアトップ #1400（2回塗り）</option>
+          <option value="7000">フロアトップ #7000（2回塗り）</option>
+          <option value="custom">自分で塗布量を入力</option>
+        </select>
+      </div>
+      <div class="floor-field">
+        <label for="floorRate">合計塗布量（kg/㎡）</label>
+        <input id="floorRate" type="number" min="0" step="0.01" value="0.35" inputmode="decimal">
+      </div>
+      <div class="floor-field">
+        <label for="floorLoss">ロス分（%）</label>
+        <input id="floorLoss" type="number" min="0" max="100" step="1" value="10" inputmode="numeric">
+      </div>
+    </div>
+
+    <div class="floor-result">
+      <div>必要量の目安：<strong id="floorNeed">11.55 kg</strong></div>
+      <div class="floor-sub" id="floorDetail">30㎡ × 0.35kg/㎡ × 1.10 = 11.55kg</div>
+      <div class="floor-sub" id="floorCan">15kg缶なら 1缶が目安</div>
+    </div>
+
+    <p class="note" style="margin-top:14px">
+      計算式：床面積 × 合計塗布量 ×（1＋ロス率）＝必要量
+    </p>
+  </section>
+
 
   <section class="notice">
     <strong>先に大事なポイント</strong>
@@ -233,74 +284,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;color:#7f8b96;font-s
       <div class="tool"><strong>防毒マスク</strong><br>特に油性塗料・溶剤系で重要</div>
       <div class="tool"><strong>ニトリル手袋</strong><br>手の汚れ・塗料付着防止</div>
       <div class="tool"><strong>ペイントうすめ液</strong><br>油性塗料の希釈や道具の洗浄用</div>
-    </div>
-  </section>
-
-
-  <section class="panel">
-    <h2>何㎡で何kg必要？ 塗料量を自動計算</h2>
-    <p>床面積を入力すると、選んだ塗料の標準塗布量をもとに必要量の目安を計算します。下地の粗さや吸い込み、ローラーへの残りなどで使用量は変わるため、実際の購入量は少し余裕を持たせるのがおすすめです。</p>
-
-    <div class="paint-calc">
-      <div class="paint-calc-grid">
-        <div class="paint-field">
-          <label for="floorArea">床面積（㎡）</label>
-          <input id="floorArea" type="number" min="0" step="0.1" value="30" inputmode="decimal">
-        </div>
-        <div class="paint-field">
-          <label for="floorProduct">塗料</label>
-          <select id="floorProduct">
-            <option value="1400">フロアトップ #1400（2回塗り）</option>
-            <option value="7000">フロアトップ #7000（2回塗り）</option>
-            <option value="custom">自分で塗布量を入力</option>
-          </select>
-        </div>
-        <div class="paint-field">
-          <label for="floorRate">合計塗布量（kg/㎡）</label>
-          <input id="floorRate" type="number" min="0" step="0.01" value="0.35" inputmode="decimal">
-        </div>
-        <div class="paint-field">
-          <label for="floorLoss">ロス分（%）</label>
-          <input id="floorLoss" type="number" min="0" max="100" step="1" value="10" inputmode="numeric">
-        </div>
-      </div>
-      <div class="paint-result">
-        <div>必要量の目安：<strong id="floorNeed">11.55 kg</strong></div>
-        <div class="paint-sub" id="floorDetail">30㎡ × 0.35kg/㎡ × 1.10 = 11.55kg</div>
-        <div class="paint-sub" id="floorCan">15kg缶なら 1缶が目安</div>
-      </div>
-      <p class="note" style="margin-top:14px">※メーカーの標準仕様では、#1400は上塗り①0.20kg/㎡＋上塗り②0.15kg/㎡、#7000は0.17kg/㎡×2回が目安です。下地や工法によって必要量は変わります。</p>
-    </div>
-  </section>
-
-  <section class="panel">
-    <h2>乾燥時間・次に塗れるまでの目安</h2>
-    <p>「表面が乾いた時間」と「次の工程へ進める時間」は同じではありません。ここではメーカーが示す23℃での標準的な塗装間隔をまとめています。</p>
-    <table class="dry-table">
-      <tr>
-        <th>製品・工程</th>
-        <th>次の工程までの目安（23℃）</th>
-      </tr>
-      <tr>
-        <td>フロアトップアクア 水性速乾プライマー → #1400</td>
-        <td>1時間以上</td>
-      </tr>
-      <tr>
-        <td>フロアトップ #1400 1回目 → 2回目</td>
-        <td>4時間以上</td>
-      </tr>
-      <tr>
-        <td>#800プライマー → フロアトップ #7000</td>
-        <td>2〜8時間</td>
-      </tr>
-      <tr>
-        <td>フロアトップ #7000 1回目 → 2回目</td>
-        <td>2時間以上</td>
-      </tr>
-    </table>
-    <div class="notice" style="margin-top:16px">
-      <strong>車を入れるタイミングは別に確認</strong>
-      <p>上の時間は「次の塗装工程へ進めるまで」の目安です。車両走行や重い物を置けるまでの養生時間は、気温・湿度・塗膜厚・製品仕様で変わります。使用前は必ず製品缶やメーカー施工仕様書の養生条件を確認してください。</p>
     </div>
   </section>
 
@@ -445,7 +428,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;color:#7f8b96;font-s
   </main>
 
 
-
 <a class="back-home" href="index.html"><span class="back-arrow">←</span><span>道具比較.com トップへ戻る</span></a>
 
 <footer>
@@ -462,25 +444,20 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;color:#7f8b96;font-s
   const need=document.getElementById('floorNeed');
   const detail=document.getElementById('floorDetail');
   const can=document.getElementById('floorCan');
-  if(!area||!product||!rate||!loss) return;
-
+  if(!area||!product||!rate||!loss)return;
   const presets={
     '1400':{rate:0.35,can:15,label:'15kg缶'},
     '7000':{rate:0.34,can:15,label:'15kgセット'}
   };
-
-  function round2(n){return Math.round(n*100)/100;}
-  function recalc(){
-    if(product.value!=='custom'){
-      rate.value=presets[product.value].rate;
-    }
+  function r2(n){return Math.round(n*100)/100}
+  function calc(){
+    if(product.value!=='custom') rate.value=presets[product.value].rate;
     const a=parseFloat(area.value)||0;
-    const r=parseFloat(rate.value)||0;
+    const rr=parseFloat(rate.value)||0;
     const l=parseFloat(loss.value)||0;
-    const total=a*r*(1+l/100);
-    need.textContent=round2(total)+' kg';
-    detail.textContent=round2(a)+'㎡ × '+round2(r)+'kg/㎡ × '+(1+l/100).toFixed(2)+' = '+round2(total)+'kg';
-
+    const total=a*rr*(1+l/100);
+    need.textContent=r2(total)+' kg';
+    detail.textContent=r2(a)+'㎡ × '+r2(rr)+'kg/㎡ × '+(1+l/100).toFixed(2)+' = '+r2(total)+'kg';
     if(product.value!=='custom'){
       const p=presets[product.value];
       can.textContent=p.label+'なら '+Math.ceil(total/p.can)+'缶が目安';
@@ -488,14 +465,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;color:#7f8b96;font-s
       can.textContent='使用する商品の容量に合わせて缶数を確認してください';
     }
   }
-
-  product.addEventListener('change',function(){
-    rate.readOnly=product.value!=='custom';
-    recalc();
-  });
-  [area,rate,loss].forEach(el=>el.addEventListener('input',recalc));
-  rate.readOnly=true;
-  recalc();
+  product.addEventListener('change',function(){rate.readOnly=product.value!=='custom';calc()});
+  [area,rate,loss].forEach(el=>el.addEventListener('input',calc));
+  rate.readOnly=true;calc();
 })();
 </script>
 
