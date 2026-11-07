@@ -163,6 +163,24 @@ input,select,.floor-field input,.floor-field select{background:#fff;color:#24372
 </style>
 <link rel="canonical" href="https://dougu-hikaku.com/car-wash.html">
 <link rel="stylesheet" href="assets/review-layout.css">
+<style id="car-wash-layout-fix">
+/* Keep article's three process links within the page, below the site header. */
+.bay-rail{position:static;top:auto;left:auto;right:auto;z-index:auto;background:#edf3e8;border-bottom:1px solid #dce7dc;backdrop-filter:none}
+.bay-rail-inner{height:auto;min-height:52px}
+.bay-tab{height:auto;min-height:52px;color:#405b44}
+.bay-tab b{color:#4a7446}
+.bay-tab.active,.bay-tab:hover{color:#245a31;border-bottom-color:#4c9644}
+.bay-tab.active b{color:#245a31}
+/* Avoid a full-viewport hero photo that hides all article content. */
+.hero{min-height:0;height:auto;min-height:360px;max-height:480px;padding-top:0;align-items:flex-end;background:#e9eddf}
+.hero-bg{height:100%;width:100%;object-fit:cover;object-position:center 56%;filter:saturate(.75) contrast(.85);opacity:.18}
+.hero::after{background:linear-gradient(180deg,rgba(246,245,239,.25),rgba(246,245,239,.82) 70%,#f6f5ef)}
+.hero-content{padding:42px 28px 42px}
+.hero-content h1{font-size:clamp(1.9rem,4.2vw,3.2rem);color:#24372e}
+.hero-content h1 em{color:#315c42;border-bottom-color:#315c42}
+.hero-meta{margin-top:20px}
+@media(max-width:640px){.hero{min-height:0;max-height:none}.hero-content{padding:34px 18px 34px}.hero-meta{gap:12px}}
+</style>
 </head>
 <body class="dr-article">
 <div class="dr-site-header"><div class="dr-header-inner"><a class="dr-brand" href="index.html" aria-label="この道具ええやん.com トップ"><span class="dr-mark" aria-hidden="true">✓</span><span>この道具ええやん<small>.com</small><em>暮らしと作業の、道具選び。</em></span></a><form class="dr-search" action="index.html" role="search"><label class="dr-sr" for="dr-q">記事を検索</label><input id="dr-q" name="q" type="search" placeholder="道具名・やりたい作業で検索"><button type="submit">検索</button></form></div><nav class="dr-nav" aria-label="カテゴリ"><div><a href="index.html">すべて</a><a href="index.html?category=園芸・農作業">園芸・農作業</a><a href="index.html?category=洗車・カー用品">洗車・カー用品</a><a href="index.html?category=DIY・塗装">DIY・塗装</a><a href="index.html?category=暮らしの用品">暮らしの用品</a><a href="index.html?category=本・読みもの">本・読みもの</a></div></nav></div>
