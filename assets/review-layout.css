@@ -24,3 +24,5 @@
 @media(max-width:850px){.dr-header-inner{flex-wrap:wrap;gap:16px}.dr-search{width:100%}}
 @media(max-width:420px){.dr-site-header .dr-brand{font-size:20px;gap:8px}.dr-brand small{font-size:13px}.dr-mark{width:32px;height:32px;font-size:22px}.dr-brand em{font-size:9px;letter-spacing:.03em}}
 .dr-columns>div,.dr-sidebar,.dr-picks,.dr-pick>div{min-width:0}
+/* 楽天ブロックの「楽天で購入」：文字を大きく表示する端末でも欠けないよう、幅を文字に合わせる(HTMLは変更しない) */
+div[style*="background-color:#bf0000"]{width:auto!important;min-width:41%;white-space:nowrap}
