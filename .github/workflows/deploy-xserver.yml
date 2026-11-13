@@ -1,0 +1,36 @@
+# main に push されたら、サイトのファイルをエックスサーバーへアップロードする。
+# 必要な Secret: XSERVER_SSH_KEY(秘密鍵の中身。GitHub の Settings → Secrets and variables → Actions で登録)
+name: エックスサーバーへ公開
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-xserver
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: SSH の準備
+        env:
+          SSH_KEY: ${{ secrets.XSERVER_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          echo '[sv17340.xserver.jp]:10022 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAuK6cXIfY5nPG4pB0kS1O3qo7pvpXfT7z76ZpgqfsBp' > ~/.ssh/known_hosts
+
+      - name: アップロード(rsync)
+        run: |
+          rsync -rlptcv --delete \
+            --exclude '.git/' --exclude '.github/' \
+            --exclude '_work/' --exclude 'CLAUDE.md' --exclude '.claude/' \
+            --exclude '.htaccess' --exclude '.user.ini' \
+            -e "ssh -i ~/.ssh/id_deploy -p 10022 -o BatchMode=yes" \
+            ./ xs647918@sv17340.xserver.jp:dougu-hikaku.com/public_html/
