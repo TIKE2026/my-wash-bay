@@ -31,6 +31,6 @@ jobs:
           rsync -rlptcv --delete \
             --exclude '.git/' --exclude '.github/' \
             --exclude '_work/' --exclude 'CLAUDE.md' --exclude '.claude/' \
-            --exclude '.htaccess' --exclude '.user.ini' \
+            --exclude '.htaccess' --exclude '.user.ini' --exclude '.well-known/' \
             -e "ssh -i ~/.ssh/id_deploy -p 10022 -o BatchMode=yes" \
             ./ xs647918@sv17340.xserver.jp:dougu-hikaku.com/public_html/
