@@ -36,7 +36,7 @@ def check_page(name, new, old, blocks):
         for u, n in before.items():
             if after[u] < n:
                 errs.append(f'消えた/変わったリンク: {u.decode(errors="replace")[:140]}')
-    if name.endswith('.html'):
+    if name.endswith('.html') and blocks:
         rest = new
         for fn, b in blocks.items():
             c = new.count(b)
