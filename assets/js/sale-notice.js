@@ -65,7 +65,20 @@
     ? '<p class="sn-prime">Amazonの会員限定セールや配送特典を使うなら <a href="' + esc(PRIME_URL) + '" ' + REL + ' data-sn="prime">Amazonプライム</a>(無料体験の対象かどうかはリンク先で確認できます)。</p>'
     : '';
 
-  var css = '.sale-notice{box-sizing:border-box;max-width:100%;min-width:0;margin:16px 0 20px;padding:12px 14px;border:1px solid #e3d6a8;border-left:5px solid #d9a521;border-radius:12px;background:#fffbea;font-size:14px;line-height:1.6;color:#2b2b2b}' +
+  /* サイト内のセール向け記事への導線(いま開いている記事は出さない) */
+  var GUIDES = [
+    { href: 'sale-season-tools.html', text: '大型セールで買いたい道具', sn: 'guide-sale' },
+    { href: 'rakuten-kaimawari-items.html', text: '楽天の買いまわりに足したい消耗品・小物', sn: 'guide-kaimawari' }
+  ];
+  var here = location.pathname.split('/').pop();
+  var guideLinks = GUIDES.filter(function (g) { return g.href !== here; }).map(function (g) {
+    return '<a href="' + g.href + '" data-sn="' + g.sn + '">' + esc(g.text) + '</a>';
+  });
+  var guide = guideLinks.length
+    ? '<p class="sn-guide">セールで何を買うか迷ったら:' + guideLinks.join(' / ') + '</p>'
+    : '';
+
+  var css ='.sale-notice{box-sizing:border-box;max-width:100%;min-width:0;margin:16px 0 20px;padding:12px 14px;border:1px solid #e3d6a8;border-left:5px solid #d9a521;border-radius:12px;background:#fffbea;font-size:14px;line-height:1.6;color:#2b2b2b}' +
     '.sale-notice *{box-sizing:border-box}' +
     '.sale-notice .sn-title{margin:0 0 6px;font-size:14px;font-weight:700}' +
     '.sale-notice ul{list-style:none;margin:0;padding:0}' +
@@ -82,13 +95,15 @@
     '.sale-notice .sn-btn{flex:0 0 auto;display:inline-block;padding:4px 12px;border-radius:999px;background:#fff;border:1px solid #c9b25c;color:#5a4a0f;font-weight:700;font-size:13px;text-decoration:none}' +
     '.sale-notice .sn-btn:hover{background:#fff3c4}' +
     '.sale-notice .sn-prime{margin:6px 0 0;font-size:12px;color:#555}' +
+    '.sale-notice .sn-guide{margin:8px 0 0;padding-top:8px;border-top:1px dashed #e6dbb4;font-size:13px;font-weight:700;overflow-wrap:anywhere}' +
+    '.sale-notice .sn-guide a{color:#2f6b2f}' +
     '.sale-notice .sn-foot{margin:6px 0 0;font-size:11px;color:#777}';
 
   var box = document.createElement('aside');
   box.className = 'sale-notice';
   box.setAttribute('aria-label', 'セール情報');
   box.innerHTML = '<style>' + css + '</style>' +
-    '<p class="sn-title">いま開催中・予告中のセール</p><ul>' + rows + '</ul>' + prime +
+    '<p class="sn-title">いま開催中・予告中のセール</p><ul>' + rows + '</ul>' + prime + guide +
     '<p class="sn-foot">日程は各社の公式発表によるものです。この案内は終了後に自動で消えます。商品ごとのセール価格やポイント条件は、各社のページで確かめてください。</p>';
 
   box.addEventListener('click', function (ev) {
